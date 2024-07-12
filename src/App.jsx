@@ -14,7 +14,7 @@ const App = () => {
         <NavBar />
         <div className="mt-10">
           <Routes>
-            <Route path="/" element={<TransactionPage />} />
+            <Route path="/customerandtransaction" element={<TransactionPage />} />
             <Route path="/customertable" element={<CustomerTable />} />
             <Route path="/transactionsgraph" element={<TransactionGraph />} />
           </Routes>

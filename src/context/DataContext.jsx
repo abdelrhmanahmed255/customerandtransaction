@@ -1,23 +1,23 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-const apiUrl = 'https://abdelrhmanahmed255.github.io/transactionsapi/db.json'; 
+let apiUrl = 'https://abdelrhmanahmed255.github.io/transactionsapi/db.json'; 
 
-export const DataContext = createContext();
+export let DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
-  const [customers, setCustomers] = useState([]);
-  const [transactions, setTransactions] = useState([]);
-  const [selectedCustomerId, setSelectedCustomerId] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+export let DataProvider = ({ children }) => {
+  let [customers, setCustomers] = useState([]);
+  let [transactions, setTransactions] = useState([]);
+  let [selectedCustomerId, setSelectedCustomerId] = useState(null);
+  let [loading, setLoading] = useState(true);
+  let [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    let fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(apiUrl);
-        const data = response.data;
+        let response = await axios.get(apiUrl);
+        let data = response.data;
         setCustomers(data.customers);
         setTransactions(data.transactions);
       } catch (error) {
