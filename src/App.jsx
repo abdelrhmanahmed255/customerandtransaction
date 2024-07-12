@@ -6,7 +6,7 @@ import { DataProvider } from './context/DataContext';
 const App = () => {
   return (
     <DataProvider>
-      <div className="mt-10">
+      <div className="">
         <TransactionPage />
       </div>
     </DataProvider>
