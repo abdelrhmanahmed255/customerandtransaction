@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -7,22 +6,22 @@ const NavBar = () => {
       <div className="max-w-screen-xl mx-auto px-8">
         <div className="flex justify-center items-center h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="hover:bg-gray-800 px-3 py-2 text-white rounded-md hover:text-white font-bold text-xl">Home</Link>
+            <a href="#home" className="hover:bg-gray-800 px-3 py-2 text-white rounded-md hover:text-white font-bold text-xl">Home</a>
           </div>
           <div className=" sm:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                to="/customertable"
+              <a
+                href="#customertable"
                 className="hover:bg-gray-800 px-3 py-2 text-white rounded-md hover:text-white font-medium text-xl"
               >
                  Table
-              </Link>
-              <Link
-                to="/transactionsgraph"
+              </a>
+              <a
+                href="#transactionsgraph"
                 className="hover:bg-gray-800 px-3 py-2 text-white rounded-md hover:text-white  font-medium text-xl"
               >
                  Graph
-              </Link>
+              </a>
             </div>
           </div>
         </div>

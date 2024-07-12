@@ -16,10 +16,14 @@ let TransactionsPage = () => {
   );
 
   return (
-    <div>
+    <div id="home">
       <h2 className="text-gray-600 text-2xl mb-1 font-bold">Transactions & Customers</h2>
+      <section id="customertable">
       <CustomerTable customers={filteredCustomers} transactions={filteredTransactions} />
+      </section>
+      <section id="transactionsgraph">
       <TransactionGraph customers={filteredCustomers} transactions={filteredTransactions} />
+      </section>
     </div>
   );
 };
